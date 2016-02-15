@@ -2,7 +2,7 @@ var expect = require('chai').expect
 var fs = require('fs')
 var path = require('path')
 
-describe('mask.js', function () {
+describe('maskSync.js', function () {
   it('must work', function(done){
     var mask = require(path.join(__dirname, '../maskSync'))
     var maskedData = mask()
