@@ -15,7 +15,7 @@ module.exports = function(){
       creditCardNumber: '************' + customerArray[6].substr(12)
     })
   })
-  var customersJSON = JSON.stringify(customers)
+  var customersJSON = JSON.stringify(customers, null, 2)
   fs.writeFileSync('./customers.json', customersJSON)
   return customersJSON
 }
