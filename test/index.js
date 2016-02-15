@@ -4,19 +4,19 @@ var path = require('path')
 
 describe('mask.js', function () {
   it('must work', function(done){
-    var mask = require(path.join(__dirname, '../mask'))
+    var mask = require(path.join(__dirname, '../maskSync'))
     var maskedData = mask()
     var maskedTestData = fs.readFileSync('./test/customers.json', 'utf8')
     expect(maskedData).to.equal(maskedTestData)
     done()
   })
   it('must have readFileSync ', function(done){
-    var mask = fs.readFileSync(path.join(__dirname, '../mask.js'), 'utf8')
+    var mask = fs.readFileSync(path.join(__dirname, '../maskSync.js'), 'utf8')
     expect(mask).to.contain('readFileSync')
     done()
   })
   it('must have writeFileSync ', function(done){
-    var mask = fs.readFileSync(path.join(__dirname, '../mask.js'), 'utf8')
+    var mask = fs.readFileSync(path.join(__dirname, '../maskSync.js'), 'utf8')
     expect(mask).to.contain('writeFileSync')
     done()
   })
