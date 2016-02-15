@@ -11,7 +11,7 @@ In this lab, you'll practice synchronous code with `fs`.
 
 ## Instructions
 
-1. Create a file `sync.js`
+1. Create a file `maskSync.js`
 1. Read from a file `customers.csv` with `fs.readFileSync()`
 1. Convert CSV into JS/Node object. 
 1. Iterate over each record and mask the credit card number by replacing all but the last four digits with the `*` symbol
