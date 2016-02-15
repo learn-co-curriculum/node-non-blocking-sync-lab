@@ -3,7 +3,7 @@ var fs = require('fs')
 var path = require('path')
 
 describe('mask.js', function () {
-  it('must have work', function(done){
+  it('must work', function(done){
     var mask = require(path.join(__dirname, '../mask'))
     var maskedData = mask()
     var maskedTestData = fs.readFileSync('./test/customers.json', 'utf8')
